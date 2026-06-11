@@ -1,30 +1,26 @@
-# 📚 Catálogo de Produtos Tecnológicos API
+# 💻 Catálogo de Produtos Tecnológicos API
 
-## 📖 Descrição
+## 📖 Sobre o Projeto
 
-API REST desenvolvida em Node.js e Express para gerenciamento de um catálogo de produtos tecnológicos.
+Esta API REST foi desenvolvida utilizando Node.js e Express com o objetivo de simular um catálogo de produtos tecnológicos.
 
-O projeto foi criado como atividade prática da disciplina de Desenvolvimento de APIs, utilizando rotas e controllers separados, além de uma base de dados simulada em memória.
+O projeto segue uma estrutura organizada com separação entre rotas, controllers e base de dados simulada, permitindo realizar operações de cadastro, consulta, atualização e remoção de produtos.
 
 ---
 
 ## 🎯 Tema Escolhido
 
-Produtos Tecnológicos
+**Produtos Tecnológicos**
 
 ---
 
-## 👥 Integrantes da Equipe
+## 👥 Integrantes
 
-* Nome do Integrante 1
-* Nome do Integrante 2
-* Nome do Integrante 3
-* Nome do Integrante 4
-* Nome do Integrante 5
+* Trícia Britto
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 * Node.js
 * Express.js
@@ -51,6 +47,12 @@ catalogo-api/
 │       └── produtos.js
 │
 ├── prints/
+│   ├── estrutura.png
+│   ├── postman-get.png
+│   ├── postman-get-id.png
+│   ├── postman-post.png
+│   ├── postman-put.png
+│   └── postman-delete.png
 │
 ├── server.js
 ├── package.json
@@ -63,21 +65,33 @@ catalogo-api/
 
 ## 🚀 Como Executar o Projeto
 
-### Instalar as dependências
+### 1️⃣ Clonar o repositório
+
+```bash
+git clone https://github.com/tricibritto/catalogo-produtos-api.git
+```
+
+### 2️⃣ Acessar a pasta do projeto
+
+```bash
+cd catalogo-api
+```
+
+### 3️⃣ Instalar as dependências
 
 ```bash
 npm install
 ```
 
-### Iniciar o servidor
+### 4️⃣ Executar o servidor
 
 ```bash
 node server.js
 ```
 
-Servidor disponível em:
+### 5️⃣ Acessar a API
 
-```text
+```http
 http://localhost:3000
 ```
 
@@ -85,7 +99,7 @@ http://localhost:3000
 
 ## 📦 Base de Dados Simulada
 
-A API utiliza um array JavaScript contendo 10 produtos tecnológicos.
+A aplicação utiliza uma base de dados simulada contendo 10 produtos tecnológicos.
 
 Exemplo:
 
@@ -103,7 +117,7 @@ Exemplo:
 
 ## 📋 Listar Produtos
 
-### Requisição
+### Método
 
 ```http
 GET /listar
@@ -115,23 +129,11 @@ GET /listar
 http://localhost:3000/listar
 ```
 
-### Resposta
-
-```json
-[
-  {
-    "id": 1,
-    "nome": "Notebook Dell",
-    "categoria": "Computador"
-  }
-]
-```
-
 ---
 
 ## 🔍 Buscar Produto por ID
 
-### Requisição
+### Método
 
 ```http
 GET /buscar/:id
@@ -143,21 +145,11 @@ GET /buscar/:id
 http://localhost:3000/buscar/1
 ```
 
-### Resposta
-
-```json
-{
-  "id": 1,
-  "nome": "Notebook Dell",
-  "categoria": "Computador"
-}
-```
-
 ---
 
 ## ➕ Cadastrar Produto
 
-### Requisição
+### Método
 
 ```http
 POST /cadastrar
@@ -172,36 +164,17 @@ POST /cadastrar
 }
 ```
 
-### Resposta
-
-```json
-{
-  "mensagem": "Produto cadastrado",
-  "produto": {
-    "id": 11,
-    "nome": "Tablet Samsung",
-    "categoria": "Tablet"
-  }
-}
-```
-
 ---
 
 ## ✏️ Atualizar Produto
 
-### Requisição
+### Método
 
 ```http
 PUT /atualizar/:id
 ```
 
-### Exemplo
-
-```http
-http://localhost:3000/atualizar/1
-```
-
-### Body
+### Exemplo de Body
 
 ```json
 {
@@ -210,75 +183,106 @@ http://localhost:3000/atualizar/1
 }
 ```
 
-### Resposta
-
-```json
-{
-  "mensagem": "Produto atualizado",
-  "produto": {
-    "id": 1,
-    "nome": "Notebook Lenovo",
-    "categoria": "Computador"
-  }
-}
-```
-
 ---
 
 ## 🗑️ Remover Produto
 
-### Requisição
+### Método
 
 ```http
 DELETE /remover/:id
-```
-
-### Exemplo
-
-```http
-http://localhost:3000/remover/1
-```
-
-### Resposta
-
-```json
-{
-  "mensagem": "Produto removido com sucesso"
-}
 ```
 
 ---
 
 ## 🧪 Evidências dos Testes
 
-As evidências dos testes realizados no Postman encontram-se na pasta:
+### 📁 Estrutura do Projeto
 
-```text
-prints/
+```
+![Estrutura do Projeto](prints/estrutura.png)
+
 ```
 
-Contendo:
+---
 
-* GET - Listar Produtos
-* GET - Buscar Produto
-* POST - Cadastrar Produto
-* PUT - Atualizar Produto
-* DELETE - Remover Produto
+### 📋 GET - Listar Produtos
+
+```
+![GET Listar](prints/postman-get.png)
+
+```
 
 ---
+
+### 🔍 GET - Buscar Produto por ID
+
+```
+![GET Buscar](prints/postman-get-id.png)
+
+```
+
+---
+
+### ➕ POST - Cadastrar Produto
+
+```
+![POST Cadastrar](prints/postman-post.png)
+
+```
+
+---
+
+### ✏️ PUT - Atualizar Produto
+
+```
+![PUT Atualizar](prints/postman-put.png)
+
+```
+
+---
+
+### 🗑️ DELETE - Remover Produto
+
+```
+![DELETE Remover](prints/postman-delete.png)
+
+```
+
+---
+
+Todos os endpoints foram testados com sucesso utilizando o Postman.
 
 ## ✅ Funcionalidades
 
-* Listagem de produtos
-* Busca por ID
-* Cadastro de novos produtos
-* Atualização de registros
-* Remoção de registros
-* Retorno em formato JSON
-* Estrutura organizada em rotas e controllers
+* Listar produtos
+* Buscar produto por ID
+* Cadastrar novos produtos
+* Atualizar produtos existentes
+* Remover produtos
+* Retornar dados em formato JSON
+* Organização em rotas e controllers
 
 ---
 
-## 📌 Autor
+## 📚 Disciplina
 
-Projeto desenvolvido para fins acadêmicos na disciplina de Desenvolvimento de APIs.
+Desenvolvimento de APIs
+
+---
+
+## 🎓 Instituição
+
+SENAI
+
+---
+
+## 📌 Objetivo da Atividade
+
+Desenvolver uma API REST organizada utilizando Node.js e Express, aplicando conceitos de rotas, controllers, manipulação de dados em memória, testes com Postman e versionamento com Git e GitHub.
+
+---
+
+## 👩‍💻 Autora
+
+**Trícia Britto**
