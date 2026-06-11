@@ -194,58 +194,41 @@ DELETE /remover/:id
 ```
 
 ---
-
 ## 🧪 Evidências dos Testes
 
 ### 📁 Estrutura do Projeto
 
-```
-![Estrutura do Projeto](prints/estrutura.png)
-
-```
+![Estrutura do Projeto](./prints/estrutura.png)
 
 ---
 
 ### 📋 GET - Listar Produtos
 
-```
-![GET Listar](prints/postman-get.png)
-
-```
+![GET Listar](./prints/postman-get.png)
 
 ---
 
 ### 🔍 GET - Buscar Produto por ID
 
-```
-![GET Buscar](prints/postman-get-id.png)
-
-```
+![GET Buscar](./prints/postman-get-id.png)
 
 ---
 
 ### ➕ POST - Cadastrar Produto
 
-```
-![POST Cadastrar](prints/postman-post.png)
-
-```
+![POST Cadastrar](./prints/postman-post.png)
 
 ---
 
 ### ✏️ PUT - Atualizar Produto
 
-```
-![PUT Atualizar](prints/postman-put.png)
-
-```
+![PUT Atualizar](./prints/postman-put.png)
 
 ---
 
 ### 🗑️ DELETE - Remover Produto
 
-```
-![DELETE Remover](prints/postman-delete.png)
+![DELETE Remover](./prints/postman-delete.png)
 
 ```
 
