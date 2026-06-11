@@ -230,8 +230,6 @@ DELETE /remover/:id
 
 ![DELETE Remover](./prints/postman-delete.png)
 
-```
-
 ---
 
 Todos os endpoints foram testados com sucesso utilizando o Postman.
